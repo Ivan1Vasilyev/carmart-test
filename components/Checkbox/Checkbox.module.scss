@@ -1,0 +1,58 @@
+@use '../../styles/common/main' as m;
+
+.container {
+  display: flex;
+  align-items: center;
+  height: 0.8rem;
+}
+
+.item {
+  color: m.$menu-item-gray;
+  font-size: 0.7rem;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  :hover {
+    & .checkbox {
+      accent-color: inherit;
+    }
+  }
+}
+
+.checkbox {
+  width: 0.8rem;
+  height: 0.8rem;
+  border: none;
+  box-shadow: 0 0 0 0.4rem m.$menu-checkbox-gray inset;
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: 0.15rem;
+    top: 0.15rem;
+    width: 0.4rem;
+    height: 0.2rem;
+    border-left: 0.1rem solid m.$menu-checkbox-checked-green;
+    border-bottom: 0.1rem solid m.$menu-checkbox-checked-green;
+    transform: rotate(-45deg);
+    opacity: 0;
+    transition: 0.3s;
+  }
+
+  &:checked::before {
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.name {
+  padding-left: 0.55rem;
+}

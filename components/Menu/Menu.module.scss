@@ -1,0 +1,56 @@
+@use '../../styles/common/main' as m;
+
+.container {
+  background-color: m.$menu-gray;
+  width: 13.775rem;
+  padding: 0.8rem 0.7rem 0.75rem;
+  border-radius: 0.2rem 0.2rem 0px 0px;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+}
+
+.title-wrapper {
+  display: block;
+  background-image: url(../../images/menu-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  cursor: pointer;
+}
+
+.title {
+  color: m.$menu-white;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  transition: 0.3s;
+}
+
+.accordion {
+  display: none;
+}
+
+.list-wrapper {
+  transform-origin: 50% 0%;
+  transform: rotateX(90deg);
+  height: 0;
+  animation: close 0.3s forwards;
+}
+
+.open {
+  animation: open 0.3s forwards;
+}
+
+.caption {
+  color: m.$menu-item-gray;
+  font-size: 0.7rem;
+  line-height: 1.2rem;
+  padding-top: 0.6rem;
+}
+
+.list {
+  padding: 0.6rem 0 0.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}

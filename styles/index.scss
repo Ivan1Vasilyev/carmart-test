@@ -1,0 +1,49 @@
+@use './vendor/normalize.css';
+@use '../node_modules/bootstrap/scss/bootstrap-grid.scss' with (
+  $grid-columns: 24,
+  $enable-grid-classes: false,
+  $enable-cssgrid: true
+);
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header {
+  height: 5rem;
+  position: relative;
+}
+
+.card-container {
+  justify-items: center;
+  @media screen and (max-width: 768px) {
+    column-gap: 0;
+  }
+}

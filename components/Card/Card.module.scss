@@ -1,0 +1,120 @@
+@use '../../styles/common/main' as m;
+
+.container {
+  width: 20.2rem;
+  height: 30.2rem;
+  box-shadow: 0 0.3rem 1.6rem m.$shadow-gray;
+  border-radius: 0.4rem;
+  padding: 2.6rem 1.3rem 0;
+  color: m.$text-black;
+}
+
+.small-container {
+  height: 25.3rem;
+  padding-top: 1.75rem;
+}
+
+.one-line {
+  display: flex;
+  align-items: baseline;
+}
+
+.model {
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.year {
+  @extend .colored-text;
+  font-size: 0.65rem;
+}
+
+.vin {
+  margin-top: 0.25rem;
+  font-size: 0.5rem;
+  line-height: 0.75rem;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  color: m.$vin-gray;
+}
+
+.transmission {
+  padding: 0 0.1rem 0 0.2rem;
+}
+
+.parameter {
+  font-size: 0.5rem;
+  line-height: 0.6rem;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  color: m.$parameter-color;
+}
+
+.description {
+  font-size: 0.7rem;
+  line-height: 1rem;
+  padding-top: 0.25rem;
+  white-space: nowrap;
+}
+
+.colored-text {
+  color: m.$text-green;
+}
+
+.options {
+  @extend .description;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.packages {
+  padding-top: 5px;
+  font-size: 0.6rem;
+  letter-spacing: 0.06rem;
+  color: m.$vin-gray;
+  white-space: nowrap;
+}
+
+.price {
+  font-size: 1.4rem;
+}
+
+.price-in-right {
+  padding-top: 0.25rem;
+}
+
+.align-right {
+  text-align: end;
+}
+
+.button {
+  text-transform: uppercase;
+  font-size: 0.5rem;
+  letter-spacing: 0.1rem;
+  width: 7.25rem;
+  height: 2.4rem;
+  border: none;
+  border-radius: 0.4rem;
+  color: m.$white;
+  background: linear-gradient(252deg, #38ef7d 0%, #11998e 100%);
+  transform: translateY(0.15rem);
+}
+
+.big-button {
+  @extend .button;
+  width: 9.1rem;
+  transform: translateY(-0.2rem);
+}
+
+.no-photo {
+  display: flex;
+  align-items: center;
+  height: 8.8rem;
+
+  &-line {
+    text-align: center;
+  }
+}
